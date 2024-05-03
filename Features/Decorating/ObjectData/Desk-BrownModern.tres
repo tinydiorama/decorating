@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PlaceableItem" load_steps=3 format=3 uid="uid://fm6jww5mmdxb"]
+
+[ext_resource type="Texture2D" uid="uid://dew7i58ke4rqd" path="res://Images/Objects/desk-brownmodern.png" id="1_3ig4j"]
+[ext_resource type="Script" path="res://Features/Decorating/PlaceableItem.gd" id="1_q5ay4"]
+
+[resource]
+script = ExtResource("1_q5ay4")
+id = "desk-brown-modern"
+name = "Wooden Desk"
+description = "A sensible wooden desk."
+tags = Array[String]([])
+inventoryTexture = ExtResource("1_3ig4j")
+placeableItemScenePath = "res://Features/Decorating/Objects/desk_brown_modern.tscn"

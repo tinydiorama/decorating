@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bucygen2ms2dk"]
+
+[ext_resource type="Script" path="res://Features/Decorating/PlaceableFootprint.gd" id="1_kc5gl"]
+
+[node name="PlaceableFootprint" type="Area2D"]
+collision_mask = 7
+script = ExtResource("1_kc5gl")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(0, -10, -10, 0, 0, 10, 10, 0)
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

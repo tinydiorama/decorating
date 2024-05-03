@@ -1,0 +1,73 @@
+[gd_scene load_steps=5 format=3 uid="uid://gijla7qpihrd"]
+
+[ext_resource type="Script" path="res://Features/Decorating/Placeable.gd" id="1_iqmlm"]
+[ext_resource type="PackedScene" uid="uid://bucygen2ms2dk" path="res://Features/Decorating/placeable_footprint.tscn" id="2_5uwek"]
+[ext_resource type="Texture2D" uid="uid://ckx1pnjk8df78" path="res://Images/UI/9slice.png" id="3_y3lw8"]
+[ext_resource type="Theme" uid="uid://5m3hxsr6k2n8" path="res://GameTheme.tres" id="4_yd1i8"]
+
+[node name="Placeable" type="StaticBody2D"]
+input_pickable = true
+script = ExtResource("1_iqmlm")
+
+[node name="PlaceableFootprint" parent="." instance=ExtResource("2_5uwek")]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="GrippyCollision" type="CollisionPolygon2D" parent="."]
+unique_name_in_owner = true
+polygon = PackedVector2Array(0, -10, 14, 0, 0, 9, -15, 0)
+
+[node name="ControlsPanel" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = -91.0
+offset_top = -97.0
+offset_right = 91.0
+offset_bottom = -21.0
+
+[node name="Panel" type="NinePatchRect" parent="ControlsPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_y3lw8")
+patch_margin_left = 20
+patch_margin_top = 22
+patch_margin_right = 22
+patch_margin_bottom = 39
+
+[node name="MarginContainer" type="MarginContainer" parent="ControlsPanel/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_yd1i8")
+theme_override_constants/margin_bottom = 40
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ControlsPanel/Panel/MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Confirm" type="Button" parent="ControlsPanel/Panel/MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "Confirm"
+
+[node name="Delete" type="Button" parent="ControlsPanel/Panel/MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "Delete"
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="placement_eligibility_changed" from="PlaceableFootprint" to="." method="_on_placeable_footprint_placement_eligibility_changed"]
+[connection signal="pressed" from="ControlsPanel/Panel/MarginContainer/HBoxContainer/Confirm" to="." method="_on_confirm_pressed"]
+[connection signal="pressed" from="ControlsPanel/Panel/MarginContainer/HBoxContainer/Delete" to="." method="_on_delete_pressed"]
+
+[editable path="PlaceableFootprint"]

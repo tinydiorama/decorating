@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://78kwljklef4y"]
+
+[ext_resource type="PackedScene" uid="uid://gijla7qpihrd" path="res://Features/Decorating/Placeable.tscn" id="1_vdt22"]
+[ext_resource type="Resource" uid="uid://fm6jww5mmdxb" path="res://Features/Decorating/ObjectData/Desk-BrownModern.tres" id="2_jwnkh"]
+[ext_resource type="Texture2D" uid="uid://dew7i58ke4rqd" path="res://Images/Objects/desk-brownmodern.png" id="2_odlny"]
+
+[node name="Desk-BrownModern" instance=ExtResource("1_vdt22")]
+placeableItem = ExtResource("2_jwnkh")
+
+[node name="PlaceableFootprint" parent="." index="0"]
+position = Vector2(0, -35.5)
+surfaceOrWallCollision = 2
+collisionRequired = 2
+
+[node name="CollisionPolygon2D" parent="PlaceableFootprint" index="0"]
+polygon = PackedVector2Array(35, -10.5, -102, 65.5, -106, 75, -30, 120, -18, 113, -23, 33, 28, 2, 91, 46, 107, 38)
+
+[node name="Sprite2D" parent="." index="1"]
+position = Vector2(0, -35.5)
+texture = ExtResource("2_odlny")
+
+[node name="GrippyCollision" parent="." index="2"]
+polygon = PackedVector2Array(99, -109, 104, -1, -32, 82, -106, 46, -105, -76, 35, -150)
+
+[node name="ControlsPanel" parent="." index="3"]
+visible = false
+offset_top = -223.0
+offset_bottom = -147.0
+
+[editable path="PlaceableFootprint"]

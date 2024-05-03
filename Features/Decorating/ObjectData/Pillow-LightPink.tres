@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PlaceableItem" load_steps=3 format=3 uid="uid://ryhbpb6e3sn6"]
+
+[ext_resource type="Texture2D" uid="uid://d2845h5fvkgkn" path="res://Images/Objects/pillow-lightpink.png" id="1_b71wd"]
+[ext_resource type="Script" path="res://Features/Decorating/PlaceableItem.gd" id="1_x1052"]
+
+[resource]
+script = ExtResource("1_x1052")
+id = "pillow-light-pink"
+name = "Light Pink Pillow"
+description = "A soft pillow."
+tags = Array[String]([])
+inventoryTexture = ExtResource("1_b71wd")
+placeableItemScenePath = "res://Features/Decorating/Objects/pillow_light_pink.tscn"

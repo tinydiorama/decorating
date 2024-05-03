@@ -1,0 +1,136 @@
+[gd_scene load_steps=10 format=3 uid="uid://8jmy8w061b3o"]
+
+[ext_resource type="Texture2D" uid="uid://do0ktkqphhvwf" path="res://Images/Levels/bg.png" id="1_lmged"]
+[ext_resource type="Script" path="res://Decorator.gd" id="1_rrgwt"]
+[ext_resource type="PackedScene" uid="uid://c550b581bm3da" path="res://Features/UI/UI.tscn" id="2_0e86j"]
+[ext_resource type="Resource" uid="uid://d1l6flqxxohoq" path="res://Features/Decorating/ObjectData/PinkHeartBed.tres" id="2_1rkmb"]
+[ext_resource type="Resource" uid="uid://fm6jww5mmdxb" path="res://Features/Decorating/ObjectData/Desk-BrownModern.tres" id="3_dne7d"]
+[ext_resource type="Script" path="res://Features/Decorating/Level.gd" id="3_mk3fe"]
+[ext_resource type="Resource" uid="uid://bw1yiwqrxdkws" path="res://Features/Decorating/ObjectData/Chair-PinkOffice.tres" id="4_303od"]
+[ext_resource type="Resource" uid="uid://ryhbpb6e3sn6" path="res://Features/Decorating/ObjectData/Pillow-LightPink.tres" id="5_ndw4k"]
+[ext_resource type="Texture2D" uid="uid://cyhajti8nu7f0" path="res://Images/Textures/SolidTexture.png" id="9_dj0sr"]
+
+[node name="Decorator" type="Node2D"]
+script = ExtResource("1_rrgwt")
+actualItemData = ExtResource("2_1rkmb")
+itemData2 = ExtResource("3_dne7d")
+itemData3 = ExtResource("4_303od")
+itemData4 = ExtResource("5_ndw4k")
+
+[node name="UI" parent="." instance=ExtResource("2_0e86j")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+limit_left = 0
+limit_top = 0
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+
+[node name="Level" type="Node2D" parent="."]
+script = ExtResource("3_mk3fe")
+
+[node name="Sprite2D" type="Sprite2D" parent="Level"]
+z_index = -1
+position = Vector2(958, 539)
+texture = ExtResource("1_lmged")
+
+[node name="Floor" type="Area2D" parent="Level"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(1717, 1336)
+collision_layer = 2
+collision_mask = 3
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Level/Floor"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(-1128, 498)
+polygon = PackedVector2Array(-119, -1095, 342, -1376, 302, -1490, 166, -1871, -624, -1849, -655, -720, 1318, -727, 1363, -1859, 202, -1863, 349, -1375, 844, -1088, 360, -817)
+
+[node name="Wall" type="Area2D" parent="Level"]
+collision_layer = 4
+collision_mask = 5
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Level/Wall"]
+polygon = PackedVector2Array(949, -115, 953, 457, 481, 732, 963, 1016, 1439, 745, 960, 462, 972, -125, 2163, -99, 1984, 1136, -134, 1135, -80, -96)
+
+[node name="Level" type="Area2D" parent="Level"]
+position = Vector2(1717, 1336)
+collision_layer = 16
+collision_mask = 15
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Level/Level"]
+polygon = PackedVector2Array(-768, -1436, -761, -1225, -1236, -952, -1231, -605, -761, -323, -285, -599, -289, -954, -748, -1211, -744, -1443, 399, -1433, 250, -180, -1955, -168, -1830, -1445)
+
+[node name="PlaceableArea" type="Node2D" parent="Level"]
+y_sort_enabled = true
+position = Vector2(921, 754)
+
+[node name="WallTexture" type="Area2D" parent="Level"]
+collision_layer = 32
+collision_mask = 32
+
+[node name="WallTexture" type="Polygon2D" parent="Level/WallTexture"]
+z_index = -1
+texture_repeat = 2
+position = Vector2(722.812, 423.457)
+rotation = -1.56207
+scale = Vector2(2.64925, 4.22699)
+skew = -0.541052
+color = Color(0.854902, 0.854902, 0.854902, 1)
+texture = ExtResource("9_dj0sr")
+texture_scale = Vector2(20, 20)
+polygon = PackedVector2Array(63.919, -64.1471, 64.0547, 63.9678, 59.6, 64, -59, 64, -64.398, 63.8854, -64.2369, 59.4913, -63.6738, -62.8202, -59.0746, -62.9368, 59, -64)
+uv = PackedVector2Array(128, 4.4, 128, 123, 123.6, 128, 5, 128, 0, 123.6, 0, 4.4, 5, 0.1, 123, 0)
+polygons = [PackedInt32Array(0, 1, 2, 3, 4, 5, 6, 7)]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Level/WallTexture"]
+polygon = PackedVector2Array(489, 385, 484, 731, 953, 456, 958, 109)
+
+[node name="FloorTexture" type="Area2D" parent="Level"]
+collision_layer = 32
+collision_mask = 32
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Level/FloorTexture"]
+position = Vector2(956.942, 736.401)
+rotation = 0.532326
+scale = Vector2(4.32436, 4.26719)
+skew = 0.506145
+polygon = PackedVector2Array(-63.6842, -64.0092, -64.7488, 62.1989, 62.9271, 63.4825, 63.7514, -64.3291)
+
+[node name="FloorTexture" type="Polygon2D" parent="Level/FloorTexture"]
+z_index = -1
+texture_repeat = 2
+position = Vector2(956.942, 736.401)
+rotation = 0.532326
+scale = Vector2(4.32436, 4.26719)
+skew = 0.506145
+texture = ExtResource("9_dj0sr")
+texture_scale = Vector2(20, 20)
+polygon = PackedVector2Array(64.0141, -64.0185, 64, 59, 64.1166, 63.998, 59.6, 64, -59, 64, -63.9703, 64.0061, -64, 59.6, -64.0213, -63.8858, -64.0761, -63.9959, -59, -63.9, 59, -64, 63.9892, -64.0537)
+uv = PackedVector2Array(128, 4.4, 128, 123, 123.6, 128, 5, 128, 0, 123.6, 0, 4.4, 5, 0.1, 123, 0)
+polygons = [PackedInt32Array(0, 1, 2, 3, 4, 5, 6, 7)]
+
+[node name="WallTexture2" type="Area2D" parent="Level"]
+collision_layer = 32
+collision_mask = 32
+
+[node name="WallTexture2" type="Polygon2D" parent="Level/WallTexture2"]
+z_index = -1
+texture_repeat = 2
+position = Vector2(1189.6, 424.263)
+rotation = -1.5708
+scale = Vector2(2.65973, 4.33877)
+skew = 0.523599
+color = Color(0.964706, 0.964706, 0.964706, 1)
+texture = ExtResource("9_dj0sr")
+texture_scale = Vector2(20, 20)
+polygon = PackedVector2Array(63.919, -64.1471, 64.0547, 63.9678, 59.6, 64, -59, 64, -64.398, 63.8854, -64.2369, 59.4913, -63.6738, -62.8202, -59.0746, -62.9368, 59, -64)
+uv = PackedVector2Array(128, 4.4, 128, 123, 123.6, 128, 5, 128, 0, 123.6, 0, 4.4, 5, 0.1, 123, 0)
+polygons = [PackedInt32Array(0, 1, 2, 3, 4, 5, 6, 7)]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Level/WallTexture2"]
+polygon = PackedVector2Array(956, 111, 954, 457, 1435, 739, 1427, 379)
+
+[connection signal="itemSelected" from="UI" to="." method="_on_ui_item_selected"]

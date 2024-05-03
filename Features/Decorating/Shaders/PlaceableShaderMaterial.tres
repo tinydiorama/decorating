@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://ljlge3enwqib"]
+
+[ext_resource type="Shader" path="res://Features/Decorating/Shaders/PlaceableShader.gdshader" id="1_850w5"]
+
+[resource]
+shader = ExtResource("1_850w5")
+shader_parameter/PREVIEW = false
+shader_parameter/PLACEABLE = true

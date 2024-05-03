@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://kh0oor6udr1t"]
+
+[ext_resource type="Script" path="res://Features/Decorating/ItemPlacer.gd" id="1_mmmb1"]
+
+[node name="ItemPlacer" type="Node2D"]
+script = ExtResource("1_mmmb1")
