@@ -41,6 +41,7 @@ func newObjectCreated() -> void:
 	previewInstance = droppedInstance
 
 	previewInstance.isActive = true
+	SignalBus.onFurnitureActive.emit()
 	setActive()
 
 func createPlacementPreview() -> void:
@@ -54,11 +55,13 @@ func setActive() -> void:
 	previewInstance.previewing = true
 	previewInstance.showActiveUI()
 	await get_tree().create_timer(0.3).timeout
+	SignalBus.onFurnitureActive.emit()
 	isActive = true
 
 func setInactive() -> void:
 	if ( previewInstance != null ):
 		previewInstance.hideActiveUI()
+	SignalBus.onFurnitureInactive.emit()
 	isActive = false
 	
 func clearPreview() -> void:
@@ -88,6 +91,11 @@ func placeItem() -> void:
 	droppedInstance.position = previewInstance.position
 	droppedInstance.setCollisionEnabled(true)
 	world.add_child(droppedInstance)
+	if ( previewInstance.isFlipped ):
+		droppedInstance.isFlipped = true
+		droppedInstance.flip()
+	droppedInstance.sprite.self_modulate = previewInstance.currentColor
+	droppedInstance.currentColor = previewInstance.currentColor
 		
 	itemToPlace = null
 	clearPreview()

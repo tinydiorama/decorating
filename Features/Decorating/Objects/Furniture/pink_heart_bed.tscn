@@ -1,24 +1,20 @@
 [gd_scene load_steps=4 format=3 uid="uid://ck5kngbgmxl1v"]
 
-[ext_resource type="PackedScene" uid="uid://gijla7qpihrd" path="res://Features/Decorating/Placeable.tscn" id="1_117vf"]
+[ext_resource type="PackedScene" uid="uid://gijla7qpihrd" path="res://Features/Decorating/Objects/Placeable.tscn" id="1_117vf"]
 [ext_resource type="Resource" uid="uid://d1l6flqxxohoq" path="res://Features/Decorating/ObjectData/PinkHeartBed.tres" id="2_xfg2h"]
 [ext_resource type="Texture2D" uid="uid://5lv0nxj7o2ht" path="res://Images/Objects/pinkheartbed.png" id="3_ubles"]
 
 [node name="PinkHeartBed" instance=ExtResource("1_117vf")]
 placeableItem = ExtResource("2_xfg2h")
 
-[node name="PlaceableFootprint" parent="." index="0"]
-surfaceOrWallCollision = 2
-collisionRequired = 2
-
 [node name="CollisionPolygon2D" parent="PlaceableFootprint" index="0"]
-polygon = PackedVector2Array(-10, -40, -136, 29, 28, 130, 152, 56)
+polygon = PackedVector2Array(-3, -31, -142, 34, 26, 126, 148, 65)
 
-[node name="Sprite2D" parent="." index="1"]
+[node name="Outline" parent="." index="1"]
 texture = ExtResource("3_ubles")
 
 [node name="GrippyCollision" parent="." index="2"]
-polygon = PackedVector2Array(-4, -44, 152, 56, 29, 129, -145, 31)
+polygon = PackedVector2Array(-13, -29, 152, 63, 27, 128, -142, 33)
 
 [node name="ControlsPanel" parent="." index="3"]
 visible = false

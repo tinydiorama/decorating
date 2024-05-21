@@ -10,4 +10,5 @@ name = "Pink Office Chair"
 description = "A pink office chair"
 tags = Array[String]([])
 inventoryTexture = ExtResource("1_2sa5a")
-placeableItemScenePath = "res://Features/Decorating/Objects/chair_pink_office.tscn"
+placeableItemScenePath = "res://Features/Decorating/Objects/Furniture/chair_pink_office.tscn"
+defaultColor = Color(0, 0, 0, 1)

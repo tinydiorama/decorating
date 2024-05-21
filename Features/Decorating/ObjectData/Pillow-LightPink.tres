@@ -10,4 +10,5 @@ name = "Light Pink Pillow"
 description = "A soft pillow."
 tags = Array[String]([])
 inventoryTexture = ExtResource("1_b71wd")
-placeableItemScenePath = "res://Features/Decorating/Objects/pillow_light_pink.tscn"
+placeableItemScenePath = "res://Features/Decorating/Objects/Furniture/pillow_light_pink.tscn"
+defaultColor = Color(0, 0, 0, 1)

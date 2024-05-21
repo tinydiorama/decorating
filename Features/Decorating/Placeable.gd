@@ -7,12 +7,19 @@ const shaderParamPlaceable = "PLACEABLE"
 @export var placeableItem:PlaceableItem = null
 
 @onready var placeableFootprint:PlaceableFootprint = $PlaceableFootprint
-@onready var sprite:Sprite2D = $Sprite2D
+@onready var sprite:Sprite2D = $SpriteColor
 @onready var collisionShape:CollisionPolygon2D = %GrippyCollision
 @onready var controlsPanel = %ControlsPanel
 
+#Color Picker
+@onready var colorPickerPanel = %ColorPickerPopup
+@onready var colorPicker = %ColorPicker
+@onready var editColorButton = %EditColor
+
 var isActive:bool = false
 var draggable:bool = false
+var isFlipped:bool = false
+var currentColor:Color
 
 var previewing:bool:
 	get:
@@ -29,6 +36,8 @@ var canPlace:bool = true:
 		updateShader()
 		
 func _ready() -> void:
+	sprite.self_modulate = placeableItem.defaultColor
+	currentColor = placeableItem.defaultColor
 	setupShader()
 	
 func setupShader() -> void:
@@ -38,7 +47,7 @@ func setupShader() -> void:
 func updateShader() -> void:
 	if ( sprite.material == null ):
 		return
-		
+	
 	sprite.material.set_shader_parameter(shaderParamPreview, previewing)
 	sprite.material.set_shader_parameter(shaderParamPlaceable, canPlace)
 
@@ -53,6 +62,8 @@ func _on_placeable_footprint_placement_eligibility_changed(eligible):
 
 func showActiveUI():
 	controlsPanel.show()
+	colorPicker.set_pick_color(currentColor)
+	editColorButton.self_modulate = currentColor
 	
 func hideActiveUI():
 	controlsPanel.hide()
@@ -99,3 +110,27 @@ func _on_confirm_pressed():
 
 func _on_delete_pressed():
 	ItemPlacer.clearPreview()
+
+func _on_rotate_pressed():
+	isFlipped = ! isFlipped
+	flip()
+	
+func flip():
+	if ( isFlipped ):
+		placeableFootprint.scale.x = -1
+		sprite.scale.x = -1
+		collisionShape.scale.x = -1
+	else:
+		placeableFootprint.scale.x = 1
+		sprite.scale.x = 1
+		collisionShape.scale.x = 1
+
+
+func _on_edit_color_pressed():
+	colorPickerPanel.show()
+
+
+func _on_color_picker_color_changed(color):
+	editColorButton.self_modulate = color
+	sprite.self_modulate = color
+	currentColor = color

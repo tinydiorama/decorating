@@ -1,8 +1,21 @@
-[gd_resource type="Theme" load_steps=5 format=3 uid="uid://5m3hxsr6k2n8"]
+[gd_resource type="Theme" load_steps=12 format=3 uid="uid://5m3hxsr6k2n8"]
 
 [ext_resource type="StyleBox" uid="uid://dfhp1ycg8ktel" path="res://PanelContainer.tres" id="1_dxhqy"]
 [ext_resource type="StyleBox" uid="uid://khc248cwc2cp" path="res://ButtonPressed.tres" id="1_re07a"]
 [ext_resource type="StyleBox" uid="uid://du4lqdirvs1by" path="res://ButtonNormal.tres" id="2_6jule"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6tcns"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w8wx0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hbvtl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rodqs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w7j5v"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mwxd8"]
+bg_color = Color(1, 1, 1, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4c5s6"]
 bg_color = Color(1, 1, 1, 1)
@@ -13,6 +26,18 @@ corner_radius_bottom_left = 20
 shadow_color = Color(0.886275, 0.6, 0.6, 1)
 shadow_size = 5
 shadow_offset = Vector2(0, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7pgjv"]
+content_margin_left = 20.0
+content_margin_top = 20.0
+content_margin_right = 20.0
+content_margin_bottom = 20.0
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
 
 [resource]
 AcceptDialog/constants/buttons_separation = 0
@@ -170,14 +195,14 @@ ColorPickerButton/constants/outline_size = 0
 ColorPickerButton/font_sizes/font_size = 16
 ColorPickerButton/fonts/font = null
 ColorPickerButton/icons/bg = null
-ColorPickerButton/styles/disabled = null
-ColorPickerButton/styles/focus = null
-ColorPickerButton/styles/hover = null
-ColorPickerButton/styles/normal = null
-ColorPickerButton/styles/pressed = null
+ColorPickerButton/styles/disabled = SubResource("StyleBoxEmpty_6tcns")
+ColorPickerButton/styles/focus = SubResource("StyleBoxEmpty_w8wx0")
+ColorPickerButton/styles/hover = SubResource("StyleBoxEmpty_hbvtl")
+ColorPickerButton/styles/normal = SubResource("StyleBoxEmpty_rodqs")
+ColorPickerButton/styles/pressed = SubResource("StyleBoxEmpty_w7j5v")
 ColorPresetButton/icons/overbright_indicator = null
 ColorPresetButton/icons/preset_bg = null
-ColorPresetButton/styles/preset_fg = null
+ColorPresetButton/styles/preset_fg = SubResource("StyleBoxFlat_mwxd8")
 FileDialog/colors/file_disabled_color = Color(0, 0, 0, 1)
 FileDialog/colors/file_icon_color = Color(0, 0, 0, 1)
 FileDialog/colors/folder_icon_color = Color(0, 0, 0, 1)
@@ -429,7 +454,7 @@ PopupMenu/styles/labeled_separator_left = null
 PopupMenu/styles/labeled_separator_right = null
 PopupMenu/styles/panel = null
 PopupMenu/styles/separator = null
-PopupPanel/styles/panel = null
+PopupPanel/styles/panel = SubResource("StyleBoxFlat_7pgjv")
 ProgressBar/colors/font_color = Color(0, 0, 0, 1)
 ProgressBar/colors/font_outline_color = Color(0, 0, 0, 1)
 ProgressBar/constants/outline_size = 0
