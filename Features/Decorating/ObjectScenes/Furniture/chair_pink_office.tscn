@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://cxq2pxvvoxt8m"]
+
+[ext_resource type="PackedScene" uid="uid://gijla7qpihrd" path="res://Features/Decorating/ObjectScenes/Placeable.tscn" id="1_j45w6"]
+[ext_resource type="Resource" uid="uid://bw1yiwqrxdkws" path="res://Features/Decorating/ObjectData/Chair-PinkOffice.tres" id="2_3drfx"]
+[ext_resource type="Texture2D" uid="uid://cylpbajcmajci" path="res://Images/Objects/deskchair-color.png" id="3_8s4yq"]
+[ext_resource type="Texture2D" uid="uid://csmuum7ryn6gs" path="res://Images/Objects/deskchair-outline.png" id="4_idkjh"]
+
+[node name="Chair-PinkOffice" instance=ExtResource("1_j45w6")]
+placeableItem = ExtResource("2_3drfx")
+
+[node name="PlaceableFootprint" parent="." index="0"]
+position = Vector2(0, -31)
+surfaceOrWallCollision = 2
+collisionRequired = 2
+
+[node name="CollisionPolygon2D" parent="PlaceableFootprint" index="0"]
+polygon = PackedVector2Array(0, 32, -45, 59, -1, 84, 36, 62)
+
+[node name="SpriteColor" parent="." index="1"]
+position = Vector2(0, -16)
+texture = ExtResource("3_8s4yq")
+
+[node name="Outline" parent="SpriteColor" index="1"]
+texture = ExtResource("4_idkjh")
+
+[node name="GrippyCollision" parent="." index="2"]
+polygon = PackedVector2Array(22, -84, 36, 31, -2, 52, -45, 29)
+
+[node name="ControlsPanel" parent="." index="3"]
+visible = false
+offset_top = -232.0
+offset_bottom = -156.0
+
+[editable path="PlaceableFootprint"]

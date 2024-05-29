@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="FloorWallOption" load_steps=2 format=3 uid="uid://csep8niqu877f"]
+
+[ext_resource type="Script" path="res://Features/Decorating/FloorWallOption.gd" id="1_guuy3"]
+
+[resource]
+script = ExtResource("1_guuy3")
+id = "plainOakFloor"
+name = "Plain Oak"
+description = ""
+tags = Array[String]([])
+defaultColor = Color(1, 1, 1, 1)
+floorOrWall = 0

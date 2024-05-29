@@ -1,0 +1,148 @@
+[gd_scene load_steps=9 format=3 uid="uid://b0lt3v62knfo6"]
+
+[ext_resource type="Script" path="res://Features/UI/WallFloor.gd" id="1_si1fx"]
+[ext_resource type="Theme" uid="uid://5m3hxsr6k2n8" path="res://GameTheme.tres" id="1_wlko1"]
+[ext_resource type="StyleBox" uid="uid://b65mx5lvobkq1" path="res://BorderBox.tres" id="2_a3eqp"]
+[ext_resource type="Texture2D" uid="uid://cyhajti8nu7f0" path="res://Images/Textures/SolidTexture.png" id="3_6ir0i"]
+[ext_resource type="Texture2D" uid="uid://b2ypfedm7fp1n" path="res://Images/UI/close-small.png" id="4_k4pjv"]
+[ext_resource type="PackedScene" uid="uid://bmpc4xpgg828h" path="res://Features/UI/floor_wall_option.tscn" id="6_sj41j"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_el0mi"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.886275, 0.6, 0.6, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_53j4l"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.886275, 0.6, 0.6, 1)
+
+[node name="WallFloor" type="Control"]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -297.0
+offset_top = 47.0
+offset_right = -40.0
+offset_bottom = 271.0
+grow_horizontal = 0
+script = ExtResource("1_si1fx")
+
+[node name="WallFloorTextures" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_wlko1")
+theme_override_styles/panel = ExtResource("2_a3eqp")
+
+[node name="MarginContainer" type="MarginContainer" parent="WallFloorTextures"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="WallFloorTextures/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="FloorPicker" type="HBoxContainer" parent="WallFloorTextures/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="WallFloorTextures/MarginContainer/VBoxContainer/FloorPicker"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_el0mi")
+
+[node name="FloorButton" type="TextureButton" parent="WallFloorTextures/MarginContainer/VBoxContainer/FloorPicker/PanelContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture_normal = ExtResource("3_6ir0i")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="WallFloorTextures/MarginContainer/VBoxContainer/FloorPicker"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Floor"
+
+[node name="WallPicker" type="HBoxContainer" parent="WallFloorTextures/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="WallFloorTextures/MarginContainer/VBoxContainer/WallPicker"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_53j4l")
+
+[node name="WallButton" type="TextureButton" parent="WallFloorTextures/MarginContainer/VBoxContainer/WallPicker/PanelContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture_normal = ExtResource("3_6ir0i")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="WallFloorTextures/MarginContainer/VBoxContainer/WallPicker"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Walls"
+
+[node name="WallFloorOptions" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = -84.0
+offset_top = 243.0
+offset_right = 253.0
+offset_bottom = 584.0
+theme_override_styles/panel = ExtResource("2_a3eqp")
+
+[node name="MarginContainer" type="MarginContainer" parent="WallFloorOptions"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="WallFloorOptions/MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="WallFloorOptions/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="WallFloorOptions/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Floors"
+
+[node name="CloseButton" type="TextureButton" parent="WallFloorOptions/MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 10
+texture_normal = ExtResource("4_k4pjv")
+stretch_mode = 5
+
+[node name="ScrollContainer" type="ScrollContainer" parent="WallFloorOptions/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="OptionList" type="VBoxContainer" parent="WallFloorOptions/MarginContainer/VBoxContainer/ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="FloorWallOption" parent="WallFloorOptions/MarginContainer/VBoxContainer/ScrollContainer/OptionList" instance=ExtResource("6_sj41j")]
+layout_mode = 2
+
+[connection signal="pressed" from="WallFloorTextures/MarginContainer/VBoxContainer/FloorPicker/PanelContainer/FloorButton" to="." method="_on_floor_button_pressed"]
+[connection signal="pressed" from="WallFloorTextures/MarginContainer/VBoxContainer/WallPicker/PanelContainer/WallButton" to="." method="_on_wall_button_pressed"]
+[connection signal="pressed" from="WallFloorOptions/MarginContainer/VBoxContainer/HBoxContainer/CloseButton" to="." method="_on_close_button_pressed"]

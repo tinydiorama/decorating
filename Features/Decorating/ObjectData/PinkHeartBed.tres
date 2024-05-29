@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="PlaceableItem" load_steps=3 format=3 uid="uid://d1l6flqxxohoq"]
 
-[ext_resource type="Texture2D" uid="uid://5lv0nxj7o2ht" path="res://Images/Objects/pinkheartbed.png" id="1_1aq5g"]
 [ext_resource type="Script" path="res://Features/Decorating/PlaceableItem.gd" id="1_4boev"]
+[ext_resource type="Texture2D" uid="uid://cwpp8l3ipdjht" path="res://Images/Objects/heartbed-icon.png" id="1_farot"]
 
 [resource]
 script = ExtResource("1_4boev")
@@ -9,6 +9,6 @@ id = ""
 name = "Pink Heart Bed"
 description = "A cute pink bed."
 tags = Array[String]([])
-inventoryTexture = ExtResource("1_1aq5g")
-placeableItemScenePath = "res://Features/Decorating/Objects/Furniture/pink_heart_bed.tscn"
-defaultColor = Color(0, 0, 0, 1)
+inventoryTexture = ExtResource("1_farot")
+placeableItemScenePath = "res://Features/Decorating/ObjectScenes/Furniture/pillow_light_pink.tscn"
+defaultColor = Color(1, 0.619608, 0.67451, 1)

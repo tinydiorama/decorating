@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://lmakyflp7vrf"]
+
+[ext_resource type="PackedScene" uid="uid://gijla7qpihrd" path="res://Features/Decorating/ObjectScenes/Placeable.tscn" id="1_50fxd"]
+[ext_resource type="Resource" uid="uid://ce3vdk6lhbqdn" path="res://Features/Decorating/ObjectData/Accessories/BunnyToy.tres" id="2_8y21f"]
+[ext_resource type="Texture2D" uid="uid://j7mpeewujksj" path="res://Images/Objects/bunnytoy-color.png" id="3_otj62"]
+[ext_resource type="Texture2D" uid="uid://cmigllactb68h" path="res://Images/Objects/bunnytoy-outline.png" id="4_o6tkd"]
+
+[node name="BunnyToy" instance=ExtResource("1_50fxd")]
+z_index = 1
+collision_layer = 8
+collision_mask = 8
+placeableItem = ExtResource("2_8y21f")
+
+[node name="PlaceableFootprint" parent="." index="0"]
+collision_layer = 8
+collision_mask = 24
+collisionRequired = 4
+
+[node name="SpriteColor" parent="." index="1"]
+texture = ExtResource("3_otj62")
+
+[node name="Outline" parent="SpriteColor" index="1"]
+texture = ExtResource("4_o6tkd")
+
+[node name="GrippyCollision" parent="." index="2"]
+polygon = PackedVector2Array(-1, -26, 27, 16, 0, 24, -25, 21)
+
+[node name="ControlsPanel" parent="." index="3"]
+visible = false
+offset_top = -138.0
+offset_bottom = -62.0
+
+[editable path="PlaceableFootprint"]

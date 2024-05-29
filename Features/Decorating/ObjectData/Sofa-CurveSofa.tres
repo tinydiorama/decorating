@@ -1,8 +1,7 @@
-[gd_resource type="Resource" script_class="PlaceableItem" load_steps=4 format=3 uid="uid://d2h4vvpyk1umg"]
+[gd_resource type="Resource" script_class="PlaceableItem" load_steps=3 format=3 uid="uid://d2h4vvpyk1umg"]
 
 [ext_resource type="Script" path="res://Features/Decorating/PlaceableItem.gd" id="1_p6b1s"]
-[ext_resource type="Texture2D" uid="uid://47nlneps8du" path="res://Images/Objects/curvesofa-outline.png" id="1_w37n6"]
-[ext_resource type="Texture2D" uid="uid://gqjxcly84xl1" path="res://Images/Objects/curvesofa-color.png" id="2_bpt85"]
+[ext_resource type="Texture2D" uid="uid://j5cgatnqwi4k" path="res://Images/Objects/curvesofa-icon.png" id="1_yqqo0"]
 
 [resource]
 script = ExtResource("1_p6b1s")
@@ -10,7 +9,6 @@ id = "sofa-curve-sofa"
 name = "Curve Sofa"
 description = "A cute soft sofa."
 tags = Array[String]([])
-inventoryTexture = ExtResource("2_bpt85")
-inventoryOutline = ExtResource("1_w37n6")
-placeableItemScenePath = "res://Features/Decorating/Objects/Furniture/curve_sofa.tscn"
+inventoryTexture = ExtResource("1_yqqo0")
+placeableItemScenePath = "res://Features/Decorating/ObjectScenes/Furniture/curve_sofa.tscn"
 defaultColor = Color(0.588235, 0.898039, 0.945098, 1)

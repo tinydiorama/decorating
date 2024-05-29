@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="PlaceableItem" load_steps=3 format=3 uid="uid://cvqaamh0btufh"]
+
+[ext_resource type="Texture2D" uid="uid://dc5thpan8lrl1" path="res://Images/Objects/coffeecup-icon.png" id="1_lffkl"]
+[ext_resource type="Script" path="res://Features/Decorating/PlaceableItem.gd" id="2_mwb7d"]
+
+[resource]
+script = ExtResource("2_mwb7d")
+id = "coffeecup"
+name = "Coffee Cup"
+description = ""
+tags = Array[String]([])
+inventoryTexture = ExtResource("1_lffkl")
+placeableItemScenePath = "res://Features/Decorating/ObjectScenes/Accessories/coffeecup.tscn"
+defaultColor = Color(1, 1, 1, 1)

@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://deueb6lsv4xt0"]
+[gd_scene load_steps=3 format=3 uid="uid://deueb6lsv4xt0"]
 
-[ext_resource type="PackedScene" uid="uid://gijla7qpihrd" path="res://Features/Decorating/Objects/Placeable.tscn" id="1_36f6h"]
+[ext_resource type="PackedScene" uid="uid://gijla7qpihrd" path="res://Features/Decorating/ObjectScenes/Placeable.tscn" id="1_36f6h"]
 [ext_resource type="Resource" uid="uid://ryhbpb6e3sn6" path="res://Features/Decorating/ObjectData/Pillow-LightPink.tres" id="2_a5qs2"]
-[ext_resource type="Texture2D" uid="uid://d2845h5fvkgkn" path="res://Images/Objects/pillow-lightpink.png" id="2_tbw76"]
 
 [node name="Pillow-LightPink" instance=ExtResource("1_36f6h")]
 z_index = 1
@@ -17,9 +16,6 @@ collisionRequired = 4
 
 [node name="CollisionPolygon2D" parent="PlaceableFootprint" index="0"]
 polygon = PackedVector2Array(16, -5, -21, 9, 0, 30, 24, 8)
-
-[node name="Outline" parent="." index="1"]
-texture = ExtResource("2_tbw76")
 
 [node name="GrippyCollision" parent="." index="2"]
 polygon = PackedVector2Array(3, -27, 20, 7, 2, 26, -25, 7)

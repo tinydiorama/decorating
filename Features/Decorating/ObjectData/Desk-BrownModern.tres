@@ -1,8 +1,7 @@
-[gd_resource type="Resource" script_class="PlaceableItem" load_steps=4 format=3 uid="uid://fm6jww5mmdxb"]
+[gd_resource type="Resource" script_class="PlaceableItem" load_steps=3 format=3 uid="uid://fm6jww5mmdxb"]
 
-[ext_resource type="Texture2D" uid="uid://blxh7fyxdt0pb" path="res://Images/Objects/basicdesk-outline.png" id="1_jwxxy"]
+[ext_resource type="Texture2D" uid="uid://cecbxec1wg12w" path="res://Images/Objects/basicdesk-icon.png" id="1_fundj"]
 [ext_resource type="Script" path="res://Features/Decorating/PlaceableItem.gd" id="1_q5ay4"]
-[ext_resource type="Texture2D" uid="uid://c67n4dgprg1cg" path="res://Images/Objects/basicdesk-color.png" id="2_ww7io"]
 
 [resource]
 script = ExtResource("1_q5ay4")
@@ -10,7 +9,6 @@ id = "desk-brown-modern"
 name = "Wooden Desk"
 description = "A sensible wooden desk."
 tags = Array[String]([])
-inventoryTexture = ExtResource("2_ww7io")
-inventoryOutline = ExtResource("1_jwxxy")
-placeableItemScenePath = "res://Features/Decorating/Objects/Furniture/desk_brown_modern.tscn"
-defaultColor = Color(0.411765, 0.231373, 0, 1)
+inventoryTexture = ExtResource("1_fundj")
+placeableItemScenePath = "res://Features/Decorating/ObjectScenes/Furniture/desk_brown_modern.tscn"
+defaultColor = Color(0.698039, 0.560784, 0.376471, 1)

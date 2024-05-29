@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://ck5kngbgmxl1v"]
+
+[ext_resource type="PackedScene" uid="uid://gijla7qpihrd" path="res://Features/Decorating/ObjectScenes/Placeable.tscn" id="1_117vf"]
+[ext_resource type="Resource" uid="uid://d1l6flqxxohoq" path="res://Features/Decorating/ObjectData/PinkHeartBed.tres" id="2_xfg2h"]
+[ext_resource type="Texture2D" uid="uid://banlj3i3fmlee" path="res://Images/Objects/heartbed-color.png" id="3_03sam"]
+[ext_resource type="Texture2D" uid="uid://dqlhwglxh5aqu" path="res://Images/Objects/heartbed-outline.png" id="4_lqc0b"]
+
+[node name="PinkHeartBed" instance=ExtResource("1_117vf")]
+placeableItem = ExtResource("2_xfg2h")
+
+[node name="PlaceableFootprint" parent="." index="0"]
+position = Vector2(-17.8, -9.89999)
+
+[node name="CollisionPolygon2D" parent="PlaceableFootprint" index="0"]
+polygon = PackedVector2Array(-3, -31, -110.2, 35.9, 40.8, 121.9, 148, 65)
+
+[node name="SpriteColor" parent="." index="1"]
+position = Vector2(21, 13)
+texture = ExtResource("3_03sam")
+
+[node name="Outline" parent="SpriteColor" index="1"]
+position = Vector2(-18, -14)
+texture = ExtResource("4_lqc0b")
+
+[node name="GrippyCollision" parent="." index="2"]
+position = Vector2(-17.8, -9.89999)
+polygon = PackedVector2Array(-13, -29, 152, 63, 39.8, 121.9, -108.2, 37.9)
+
+[node name="ControlsPanel" parent="." index="3"]
+visible = false
+offset_left = -178.0
+offset_top = -285.0
+offset_right = 171.0
+offset_bottom = -191.0
+mouse_filter = 1
+
+[node name="Panel" parent="ControlsPanel" index="0"]
+mouse_filter = 1
+
+[editable path="PlaceableFootprint"]

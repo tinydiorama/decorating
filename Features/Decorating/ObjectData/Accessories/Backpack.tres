@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="PlaceableItem" load_steps=3 format=3 uid="uid://dmfpgc82ujhcd"]
+
+[ext_resource type="Texture2D" uid="uid://7ss3to6ag5i5" path="res://Images/Objects/backpack-icon.png" id="1_ex8hd"]
+[ext_resource type="Script" path="res://Features/Decorating/PlaceableItem.gd" id="1_yc4xg"]
+
+[resource]
+script = ExtResource("1_yc4xg")
+id = "backpack"
+name = "Backpack"
+description = ""
+tags = Array[String]([])
+inventoryTexture = ExtResource("1_ex8hd")
+placeableItemScenePath = "res://Features/Decorating/ObjectScenes/Accessories/backpack.tscn"
+defaultColor = Color(0.505882, 0.666667, 0.533333, 1)

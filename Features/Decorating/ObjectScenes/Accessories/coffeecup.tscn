@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://bu2rs0tbppi5t"]
+
+[ext_resource type="PackedScene" uid="uid://gijla7qpihrd" path="res://Features/Decorating/ObjectScenes/Placeable.tscn" id="1_h66x1"]
+[ext_resource type="Resource" uid="uid://cvqaamh0btufh" path="res://Features/Decorating/ObjectData/Accessories/CoffeeCup.tres" id="2_fk20l"]
+[ext_resource type="Texture2D" uid="uid://dyw5i5jbr03g2" path="res://Images/Objects/coffeecup-color.png" id="3_243fp"]
+[ext_resource type="Texture2D" uid="uid://7d1b3pw0otfx" path="res://Images/Objects/coffeecup-outline.png" id="4_sf4hp"]
+
+[node name="CoffeeCup" instance=ExtResource("1_h66x1")]
+z_index = 1
+collision_layer = 8
+collision_mask = 8
+placeableItem = ExtResource("2_fk20l")
+
+[node name="PlaceableFootprint" parent="." index="0"]
+collision_layer = 8
+collision_mask = 24
+collisionRequired = 4
+
+[node name="CollisionPolygon2D" parent="PlaceableFootprint" index="0"]
+polygon = PackedVector2Array(-11, -3, -16, 8, 13, 10, 13, -3)
+
+[node name="SpriteColor" parent="." index="1"]
+texture = ExtResource("3_243fp")
+
+[node name="Outline" parent="SpriteColor" index="1"]
+texture = ExtResource("4_sf4hp")
+
+[node name="GrippyCollision" parent="." index="2"]
+polygon = PackedVector2Array(-16, -17, 16, -17, 18, 13, -20, 12)
+
+[node name="ControlsPanel" parent="." index="3"]
+visible = false
+offset_top = -138.0
+offset_bottom = -62.0
+
+[editable path="PlaceableFootprint"]

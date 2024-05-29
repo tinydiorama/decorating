@@ -21,7 +21,7 @@ custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 texture_normal = ExtResource("2_elo7i")
 ignore_texture_size = true
-stretch_mode = 3
+stretch_mode = 5
 
 [node name="OutlineSprite" type="Sprite2D" parent="MarginContainer/VBoxContainer/IconButton"]
 unique_name_in_owner = true

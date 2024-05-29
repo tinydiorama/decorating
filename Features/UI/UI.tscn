@@ -1,12 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://c550b581bm3da"]
+[gd_scene load_steps=5 format=3 uid="uid://c550b581bm3da"]
 
 [ext_resource type="Script" path="res://Features/UI/UI.gd" id="1_rrwcs"]
 [ext_resource type="Texture2D" uid="uid://degd8vwa6isnu" path="res://Images/UI/add.png" id="2_jcs44"]
 [ext_resource type="PackedScene" uid="uid://b3s0n0wtc4iqa" path="res://Features/UI/items_panel.tscn" id="2_tijtr"]
+[ext_resource type="PackedScene" uid="uid://b0lt3v62knfo6" path="res://Features/UI/wall_floor.tscn" id="2_wjr7d"]
 
 [node name="UI" type="CanvasLayer"]
 follow_viewport_enabled = true
 script = ExtResource("1_rrwcs")
+
+[node name="WallFloor" parent="." instance=ExtResource("2_wjr7d")]
 
 [node name="Overlay" type="Panel" parent="."]
 unique_name_in_owner = true

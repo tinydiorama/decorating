@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="PlaceableItem" load_steps=3 format=3 uid="uid://bw1yiwqrxdkws"]
 
-[ext_resource type="Texture2D" uid="uid://cqbd65lgyu8uq" path="res://Images/Objects/chair-pinkoffice.png" id="1_2sa5a"]
 [ext_resource type="Script" path="res://Features/Decorating/PlaceableItem.gd" id="1_4nhdw"]
+[ext_resource type="Texture2D" uid="uid://byrh1ssm56vks" path="res://Images/Objects/curveofficechair-icon.png" id="1_nnsl2"]
 
 [resource]
 script = ExtResource("1_4nhdw")
@@ -9,6 +9,6 @@ id = "chair-pink-office"
 name = "Pink Office Chair"
 description = "A pink office chair"
 tags = Array[String]([])
-inventoryTexture = ExtResource("1_2sa5a")
-placeableItemScenePath = "res://Features/Decorating/Objects/Furniture/chair_pink_office.tscn"
-defaultColor = Color(0, 0, 0, 1)
+inventoryTexture = ExtResource("1_nnsl2")
+placeableItemScenePath = "res://Features/Decorating/ObjectScenes/Furniture/chair_pink_office.tscn"
+defaultColor = Color(1, 0.610864, 0.831904, 1)

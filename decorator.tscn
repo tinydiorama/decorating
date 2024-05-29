@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://8jmy8w061b3o"]
+[gd_scene load_steps=14 format=3 uid="uid://8jmy8w061b3o"]
 
 [ext_resource type="Texture2D" uid="uid://do0ktkqphhvwf" path="res://Images/Levels/bg.png" id="1_lmged"]
 [ext_resource type="Script" path="res://Decorator.gd" id="1_rrgwt"]
@@ -7,8 +7,11 @@
 [ext_resource type="Resource" uid="uid://fm6jww5mmdxb" path="res://Features/Decorating/ObjectData/Desk-BrownModern.tres" id="3_dne7d"]
 [ext_resource type="Script" path="res://Features/Decorating/Level.gd" id="3_mk3fe"]
 [ext_resource type="Resource" uid="uid://bw1yiwqrxdkws" path="res://Features/Decorating/ObjectData/Chair-PinkOffice.tres" id="4_303od"]
-[ext_resource type="Resource" uid="uid://ryhbpb6e3sn6" path="res://Features/Decorating/ObjectData/Pillow-LightPink.tres" id="5_ndw4k"]
+[ext_resource type="Resource" uid="uid://dmfpgc82ujhcd" path="res://Features/Decorating/ObjectData/Accessories/Backpack.tres" id="5_fjhrj"]
 [ext_resource type="Resource" uid="uid://d2h4vvpyk1umg" path="res://Features/Decorating/ObjectData/Sofa-CurveSofa.tres" id="6_0ox85"]
+[ext_resource type="Resource" uid="uid://csep8niqu877f" path="res://Features/Decorating/Floors/PlainOak.tres" id="7_cr8ko"]
+[ext_resource type="Resource" uid="uid://ce3vdk6lhbqdn" path="res://Features/Decorating/ObjectData/Accessories/BunnyToy.tres" id="7_rgo60"]
+[ext_resource type="Resource" uid="uid://cvqaamh0btufh" path="res://Features/Decorating/ObjectData/Accessories/CoffeeCup.tres" id="8_jqwm0"]
 [ext_resource type="Texture2D" uid="uid://cyhajti8nu7f0" path="res://Images/Textures/SolidTexture.png" id="9_dj0sr"]
 
 [node name="Decorator" type="Node2D"]
@@ -16,8 +19,11 @@ script = ExtResource("1_rrgwt")
 actualItemData = ExtResource("2_1rkmb")
 itemData2 = ExtResource("3_dne7d")
 itemData3 = ExtResource("4_303od")
-itemData4 = ExtResource("5_ndw4k")
+itemData4 = ExtResource("5_fjhrj")
 itemData5 = ExtResource("6_0ox85")
+itemData6 = ExtResource("7_rgo60")
+itemData7 = ExtResource("8_jqwm0")
+floorData1 = ExtResource("7_cr8ko")
 
 [node name="UI" parent="." instance=ExtResource("2_0e86j")]
 
@@ -83,7 +89,7 @@ skew = -0.541052
 color = Color(0.854902, 0.854902, 0.854902, 1)
 texture = ExtResource("9_dj0sr")
 texture_scale = Vector2(20, 20)
-polygon = PackedVector2Array(63.919, -64.1471, 64.0547, 63.9678, 59.6, 64, -59, 64, -64.398, 63.8854, -64.2369, 59.4913, -63.6738, -62.8202, -59.0746, -62.9368, 59, -64)
+polygon = PackedVector2Array(63.919, -64.1471, 64.4054, 64.7152, 58.1786, 64.4801, -59, 64, -64.398, 63.8854, -64.2369, 59.4913, -63.6738, -62.8202, -59.0746, -62.9368, 59, -64)
 uv = PackedVector2Array(128, 4.4, 128, 123, 123.6, 128, 5, 128, 0, 123.6, 0, 4.4, 5, 0.1, 123, 0)
 polygons = [PackedInt32Array(0, 1, 2, 3, 4, 5, 6, 7)]
 
@@ -128,7 +134,7 @@ skew = 0.523599
 color = Color(0.964706, 0.964706, 0.964706, 1)
 texture = ExtResource("9_dj0sr")
 texture_scale = Vector2(20, 20)
-polygon = PackedVector2Array(63.919, -64.1471, 64.0547, 63.9678, 59.6, 64, -59, 64, -64.398, 63.8854, -64.2369, 59.4913, -63.6738, -62.8202, -59.0746, -62.9368, 59, -64)
+polygon = PackedVector2Array(67.8247, -62.1689, 64.0547, 63.9678, 59.6, 64, -59, 64, -64.398, 63.8854, -64.2369, 59.4913, -63.6738, -62.8202, -59.0746, -62.9368, 58.2082, -62.4351)
 uv = PackedVector2Array(128, 4.4, 128, 123, 123.6, 128, 5, 128, 0, 123.6, 0, 4.4, 5, 0.1, 123, 0)
 polygons = [PackedInt32Array(0, 1, 2, 3, 4, 5, 6, 7)]
 

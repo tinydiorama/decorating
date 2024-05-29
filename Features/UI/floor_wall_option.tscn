@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmpc4xpgg828h"]
+
+[ext_resource type="Texture2D" uid="uid://cyhajti8nu7f0" path="res://Images/Textures/SolidTexture.png" id="1_ce25w"]
+[ext_resource type="Script" path="res://Features/UI/FloorWallOption.gd" id="1_vc4ou"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_el0mi"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.886275, 0.6, 0.6, 1)
+
+[node name="FloorWallOption" type="HBoxContainer"]
+theme_override_constants/separation = 20
+script = ExtResource("1_vc4ou")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_el0mi")
+
+[node name="FloorWallOptionButton" type="TextureButton" parent="PanelContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_vertical = 0
+texture_normal = ExtResource("1_ce25w")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="FloorWallLabel" type="Label" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Floor asdfas df"
+autowrap_mode = 2
