@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://dk1783y7akp34"]
+
+[ext_resource type="PackedScene" uid="uid://gijla7qpihrd" path="res://Features/Decorating/ObjectScenes/Placeable.tscn" id="1_5bgbf"]
+[ext_resource type="Resource" uid="uid://crxip83dai5dg" path="res://Features/Decorating/ObjectData/Accessories/FlowerPillow.tres" id="2_6pdx7"]
+[ext_resource type="Texture2D" uid="uid://cal4b8bn2r82n" path="res://Images/Objects/flowerpillow-color.png" id="3_qyct8"]
+[ext_resource type="Texture2D" uid="uid://cbfwrqai0f04b" path="res://Images/Objects/flowerpillow-outline.png" id="4_ffom0"]
+
+[node name="FlowerPillow" instance=ExtResource("1_5bgbf")]
+z_index = 1
+collision_layer = 8
+collision_mask = 8
+placeableItem = ExtResource("2_6pdx7")
+
+[node name="PlaceableFootprint" parent="." index="0"]
+collision_layer = 8
+collision_mask = 24
+collisionRequired = 4
+
+[node name="CollisionPolygon2D" parent="PlaceableFootprint" index="0"]
+polygon = PackedVector2Array(-11, -3, -16, 8, 13, 10, 13, -3)
+
+[node name="SpriteColor" parent="." index="1"]
+texture = ExtResource("3_qyct8")
+
+[node name="Outline" parent="SpriteColor" index="1"]
+texture = ExtResource("4_ffom0")
+
+[node name="GrippyCollision" parent="." index="2"]
+polygon = PackedVector2Array(-16, -17, 16, -17, 18, 13, -20, 12)
+
+[node name="ControlsPanel" parent="." index="3"]
+visible = false
+offset_top = -138.0
+offset_bottom = -62.0
+
+[editable path="PlaceableFootprint"]

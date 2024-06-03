@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="PlaceableItem" load_steps=3 format=3 uid="uid://c3u0blooyye4p"]
+
+[ext_resource type="Texture2D" uid="uid://d4n26044hjdgl" path="res://Images/Objects/curveloveseat-icon.png" id="1_xmgtu"]
+[ext_resource type="Script" path="res://Features/Decorating/PlaceableItem.gd" id="2_xkvxi"]
+
+[resource]
+script = ExtResource("2_xkvxi")
+id = "loveseat-curve"
+name = "Curve Loveseat"
+description = "A cute soft loveseat"
+tags = Array[String]([])
+inventoryTexture = ExtResource("1_xmgtu")
+placeableItemScenePath = "res://Features/Decorating/ObjectScenes/Furniture/loveseat_curve.tscn"
+defaultColor = Color(0.733333, 0.768627, 1, 1)

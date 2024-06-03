@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="PlaceableItem" load_steps=3 format=3 uid="uid://crxip83dai5dg"]
+
+[ext_resource type="Texture2D" uid="uid://bj7rj6buk45cy" path="res://Images/Objects/flowerpillow-icon.png" id="1_hj4jv"]
+[ext_resource type="Script" path="res://Features/Decorating/PlaceableItem.gd" id="2_qefws"]
+
+[resource]
+script = ExtResource("2_qefws")
+id = "flowerpillow"
+name = "Flower Pillow"
+description = ""
+tags = Array[String]([])
+inventoryTexture = ExtResource("1_hj4jv")
+placeableItemScenePath = "res://Features/Decorating/ObjectScenes/Accessories/flowerpillow.tscn"
+defaultColor = Color(1, 0.631373, 0.792157, 1)

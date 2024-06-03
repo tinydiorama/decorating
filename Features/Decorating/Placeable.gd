@@ -38,6 +38,7 @@ var canPlace:bool = true:
 func _ready() -> void:
 	sprite.self_modulate = placeableItem.defaultColor
 	currentColor = placeableItem.defaultColor
+	placeableFootprint.hide()
 	setupShader()
 	
 func setupShader() -> void:
@@ -79,6 +80,7 @@ func _on_input_event(_viewport, event, _shape_idx):
 
 			ItemPlacer.previewInstance = self
 			ItemPlacer.itemToPlace = placeableItem
+			placeableFootprint.show()
 			isActive = true
 			ItemPlacer.setActive()
 			
@@ -105,6 +107,7 @@ func _on_mouse_exited():
 
 
 func _on_confirm_pressed():
+	placeableFootprint.hide()
 	isActive = false
 	ItemPlacer.placeItem()
 

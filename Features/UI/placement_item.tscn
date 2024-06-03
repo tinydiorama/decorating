@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://5lv0nxj7o2ht" path="res://Images/Objects/pinkheartbed.png" id="2_elo7i"]
 
 [node name="PlacementItem" type="PanelContainer"]
+mouse_filter = 1
 theme = ExtResource("1_vxm4m")
 script = ExtResource("1_ssun7")
 
@@ -19,6 +20,9 @@ layout_mode = 2
 unique_name_in_owner = true
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 1
 texture_normal = ExtResource("2_elo7i")
 ignore_texture_size = true
 stretch_mode = 5

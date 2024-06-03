@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://8jmy8w061b3o"]
+[gd_scene load_steps=16 format=3 uid="uid://8jmy8w061b3o"]
 
 [ext_resource type="Texture2D" uid="uid://do0ktkqphhvwf" path="res://Images/Levels/bg.png" id="1_lmged"]
 [ext_resource type="Script" path="res://Decorator.gd" id="1_rrgwt"]
@@ -12,7 +12,9 @@
 [ext_resource type="Resource" uid="uid://csep8niqu877f" path="res://Features/Decorating/Floors/PlainOak.tres" id="7_cr8ko"]
 [ext_resource type="Resource" uid="uid://ce3vdk6lhbqdn" path="res://Features/Decorating/ObjectData/Accessories/BunnyToy.tres" id="7_rgo60"]
 [ext_resource type="Resource" uid="uid://cvqaamh0btufh" path="res://Features/Decorating/ObjectData/Accessories/CoffeeCup.tres" id="8_jqwm0"]
+[ext_resource type="Resource" uid="uid://c3u0blooyye4p" path="res://Features/Decorating/ObjectData/Loveseat-CurveLoveseat.tres" id="9_6to5i"]
 [ext_resource type="Texture2D" uid="uid://cyhajti8nu7f0" path="res://Images/Textures/SolidTexture.png" id="9_dj0sr"]
+[ext_resource type="Resource" uid="uid://crxip83dai5dg" path="res://Features/Decorating/ObjectData/Accessories/FlowerPillow.tres" id="10_16opi"]
 
 [node name="Decorator" type="Node2D"]
 script = ExtResource("1_rrgwt")
@@ -23,6 +25,8 @@ itemData4 = ExtResource("5_fjhrj")
 itemData5 = ExtResource("6_0ox85")
 itemData6 = ExtResource("7_rgo60")
 itemData7 = ExtResource("8_jqwm0")
+itemData8 = ExtResource("9_6to5i")
+itemData9 = ExtResource("10_16opi")
 floorData1 = ExtResource("7_cr8ko")
 
 [node name="UI" parent="." instance=ExtResource("2_0e86j")]

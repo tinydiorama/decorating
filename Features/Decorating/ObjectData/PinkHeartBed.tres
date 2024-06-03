@@ -10,5 +10,5 @@ name = "Pink Heart Bed"
 description = "A cute pink bed."
 tags = Array[String]([])
 inventoryTexture = ExtResource("1_farot")
-placeableItemScenePath = "res://Features/Decorating/ObjectScenes/Furniture/pillow_light_pink.tscn"
+placeableItemScenePath = "res://Features/Decorating/ObjectScenes/Furniture/pink_heart_bed.tscn"
 defaultColor = Color(1, 0.619608, 0.67451, 1)

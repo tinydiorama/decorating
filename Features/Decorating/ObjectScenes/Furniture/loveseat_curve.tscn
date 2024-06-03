@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://c3ne56lqdey20"]
+
+[ext_resource type="PackedScene" uid="uid://gijla7qpihrd" path="res://Features/Decorating/ObjectScenes/Placeable.tscn" id="1_up1jg"]
+[ext_resource type="Resource" uid="uid://c3u0blooyye4p" path="res://Features/Decorating/ObjectData/Loveseat-CurveLoveseat.tres" id="2_3smvp"]
+[ext_resource type="Texture2D" uid="uid://c6gbar1r402uf" path="res://Images/Objects/curveloveseat-color.png" id="3_flv84"]
+[ext_resource type="Texture2D" uid="uid://b2r7051p5a755" path="res://Images/Objects/curveloveseat-outline.png" id="4_wf4xv"]
+
+[node name="CurveLoveseat" instance=ExtResource("1_up1jg")]
+placeableItem = ExtResource("2_3smvp")
+
+[node name="PlaceableFootprint" parent="." index="0"]
+surfaceOrWallCollision = 2
+collisionRequired = 2
+
+[node name="CollisionPolygon2D" parent="PlaceableFootprint" index="0"]
+polygon = PackedVector2Array(-27, -22, -89, 17, 28, 89, 93, 49)
+
+[node name="SpriteColor" parent="." index="1"]
+texture = ExtResource("3_flv84")
+
+[node name="Outline" parent="SpriteColor" index="1"]
+texture = ExtResource("4_wf4xv")
+
+[node name="GrippyCollision" parent="." index="2"]
+polygon = PackedVector2Array(94, -26, 92, 48, 28, 88, -89, 18, -96, -33, -6, -84)
+
+[node name="ControlsPanel" parent="." index="3"]
+visible = false
+offset_top = -206.0
+offset_bottom = -130.0
+
+[editable path="PlaceableFootprint"]

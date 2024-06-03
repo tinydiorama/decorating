@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=12 format=3 uid="uid://5m3hxsr6k2n8"]
+[gd_resource type="Theme" load_steps=22 format=3 uid="uid://5m3hxsr6k2n8"]
 
 [ext_resource type="StyleBox" uid="uid://dfhp1ycg8ktel" path="res://PanelContainer.tres" id="1_dxhqy"]
 [ext_resource type="StyleBox" uid="uid://khc248cwc2cp" path="res://ButtonPressed.tres" id="1_re07a"]
@@ -16,6 +16,16 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mwxd8"]
 bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ld03n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sbg7k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gklh3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ixq8t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i5sxe"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4c5s6"]
 bg_color = Color(1, 1, 1, 1)
@@ -38,6 +48,16 @@ border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
 border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4mxp2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vevsq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8nsfk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k4qm6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ngbdu"]
 
 [resource]
 AcceptDialog/constants/buttons_separation = 0
@@ -278,11 +298,11 @@ HScrollBar/icons/decrement_pressed = null
 HScrollBar/icons/increment = null
 HScrollBar/icons/increment_highlight = null
 HScrollBar/icons/increment_pressed = null
-HScrollBar/styles/grabber = null
-HScrollBar/styles/grabber_highlight = null
-HScrollBar/styles/grabber_pressed = null
-HScrollBar/styles/scroll = null
-HScrollBar/styles/scroll_focus = null
+HScrollBar/styles/grabber = SubResource("StyleBoxEmpty_ld03n")
+HScrollBar/styles/grabber_highlight = SubResource("StyleBoxEmpty_sbg7k")
+HScrollBar/styles/grabber_pressed = SubResource("StyleBoxEmpty_gklh3")
+HScrollBar/styles/scroll = SubResource("StyleBoxEmpty_ixq8t")
+HScrollBar/styles/scroll_focus = SubResource("StyleBoxEmpty_i5sxe")
 HSeparator/constants/separation = 0
 HSeparator/styles/separator = null
 HSlider/constants/center_grabber = 0
@@ -648,11 +668,11 @@ VScrollBar/icons/decrement_pressed = null
 VScrollBar/icons/increment = null
 VScrollBar/icons/increment_highlight = null
 VScrollBar/icons/increment_pressed = null
-VScrollBar/styles/grabber = null
-VScrollBar/styles/grabber_highlight = null
-VScrollBar/styles/grabber_pressed = null
-VScrollBar/styles/scroll = null
-VScrollBar/styles/scroll_focus = null
+VScrollBar/styles/grabber = SubResource("StyleBoxEmpty_4mxp2")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxEmpty_vevsq")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxEmpty_8nsfk")
+VScrollBar/styles/scroll = SubResource("StyleBoxEmpty_k4qm6")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxEmpty_ngbdu")
 VSeparator/constants/separation = 0
 VSeparator/styles/separator = null
 VSlider/constants/center_grabber = 0

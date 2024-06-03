@@ -7,6 +7,8 @@ extends Node2D
 @export var itemData5:PlaceableItem
 @export var itemData6:PlaceableItem
 @export var itemData7:PlaceableItem
+@export var itemData8:PlaceableItem
+@export var itemData9:PlaceableItem
 @export var floorData1:FloorWallOption
 
 func _ready() -> void:
@@ -17,6 +19,8 @@ func _ready() -> void:
 	Inventory.addItem(itemData5)
 	Inventory.addItem(itemData6)
 	Inventory.addItem(itemData7)
+	Inventory.addItem(itemData8)
+	Inventory.addItem(itemData9)
 	Inventory.addFloorOption(floorData1)
 	
 func handleItemSelection(params:Array) -> void:

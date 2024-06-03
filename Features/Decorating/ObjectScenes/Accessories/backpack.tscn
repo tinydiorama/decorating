@@ -23,6 +23,7 @@ texture = ExtResource("3_01hkp")
 texture = ExtResource("4_k8ce4")
 
 [node name="GrippyCollision" parent="." index="2"]
+z_index = 1
 polygon = PackedVector2Array(-1, -26, 27, 16, 0, 24, -25, 21)
 
 [node name="ControlsPanel" parent="." index="3"]

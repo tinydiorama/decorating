@@ -49,6 +49,7 @@ theme_override_constants/margin_bottom = 40
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Panel/MarginContainer"]
 layout_mode = 2
+theme = ExtResource("3_vajjj")
 vertical_scroll_mode = 0
 
 [node name="ItemList" type="HBoxContainer" parent="Panel/MarginContainer/ScrollContainer"]
